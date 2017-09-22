@@ -2,11 +2,22 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { mapStateToProps, mapDispatchToProps } from './todoReducer';
 
+import logo from './logo.svg';
+
 class App extends Component {
   render() {
     return (
-      <div className="container-fluid">
-        <ConnectedTodoContainer />
+      <div className="App">
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Simple React Todo List</h2>
+        </div>
+        <div className="App-intro">
+          <div className="row"></div>
+          <div className="container-fluid">
+            <ConnectedTodoContainer />
+          </div>
+        </div>
       </div>
     );
   }
