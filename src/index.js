@@ -12,21 +12,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const store = configureStore();
 
 class RootComponent extends Component {
-    render() {
-        return (
-            <Provider store={store}>
-                <App />
-            </Provider>
-        );
-    }
+  render() {
+    return (
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
+  }
 }
 
 ReactDOM.render(<RootComponent />, document.getElementById('root'));
 
 if (module.hot) {
-    module.hot.accept('./App', () => {
-        ReactDOM.render(<RootComponent />, document.getElementById('root'));
-    })
+  module.hot.accept('./App', () => {
+    ReactDOM.render(<RootComponent />, document.getElementById('root'));
+  })
 }
 
 registerServiceWorker();
